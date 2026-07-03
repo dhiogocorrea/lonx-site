@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Class Balance - LONX Online</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<div class="layout">
+  <aside data-page="balance" data-base="../"></aside>
+  <main class="main">
+    <div class="crumbs"><a href="../index.html">Home</a><span>/</span>Class Balance</div>
+    <div class="pagehead">
+      <span class="eyebrow">Design spreadsheet</span>
+      <h2>Class balance &amp; skill level requirements</h2>
+      <p class="lede">The tuning reference for all eleven classes. Every combat number is expressed as an <b>index</b> where <b>1.00</b> is the server baseline (a mastery-capped Warrior at the level cap). The second half of the page lists the character level at which each skill unlocks and the feat needed to push it to <b>Level Master</b>, following the <a href="systems.html">Skill Leveling</a> rule (Level I&ndash;X + Master, trained by feats).</p>
+    </div>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Reading the sheet</span><h2>How the indices work</h2></div></div>
+      <div class="grid two">
+        <div class="callout searchable" data-search="how to read indices baseline warrior 1.00 dps ehp sustain utility mobility normalized"><h3>Index scale</h3><ul>
+          <li><b>DPS</b> &mdash; sustained single-target output vs. the Warrior baseline (1.00).</li>
+          <li><b>EHP</b> &mdash; effective hit points (HP &times; mitigation); Guardian anchors the ceiling at 1.60.</li>
+          <li><b>Sustain</b> &mdash; self/party healing and cleansing throughput.</li>
+          <li><b>Utility</b> &mdash; buffs, control, exploration, and party-key value.</li>
+          <li><b>Mobility</b> &mdash; reposition, gap-close, and kite potential.</li>
+        </ul></div>
+        <div class="callout good searchable" data-search="party budget target no class above 1.25 dps sum roles rock paper scissors tuning goal"><h3>Balance targets</h3><ul>
+          <li>No class may exceed <b>1.25</b> in any single combat axis without paying for it elsewhere.</li>
+          <li>Every class must reach <b>&ge; 0.35</b> in at least two axes &mdash; no pure one-trick builds.</li>
+          <li>Burst carriers (Assassin, Mage) trade EHP for their damage ceiling.</li>
+          <li>A full party of five should sum to roughly even coverage across all five axes.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Master table</span><h2>Combat balance matrix</h2></div><p>All values are at the level cap with weapon mastery at Level Master. Race multipliers (see <a href="races.html">Races</a>) shift these within about &plusmn;15%.</p></div>
+      <div class="panel"><table>
+        <thead><tr><th>Class</th><th>Primary role</th><th>DPS</th><th>EHP</th><th>Sustain</th><th>Utility</th><th>Mobility</th><th>Skill floor</th></tr></thead>
+        <tbody>
+          <tr class="searchable" data-search="warrior carrier baseline dps forgiving frontline"><td><b>Warrior</b></td><td>Carrier</td><td><div class="metercell"><span class="meter"><i style="width:63%"></i></span><span class="num hi">1.00</span></div></td><td><div class="metercell"><span class="meter"><i style="width:59%"></i></span><span class="num">0.95</span></div></td><td><span class="num lo">0.15</span></td><td><span class="num lo">0.20</span></td><td><span class="num">0.55</span></td><td><span class="diff d1">Low</span></td></tr>
+          <tr class="searchable" data-search="guardian tank anchor support carrier highest ehp"><td><b>Guardian</b></td><td>Tank</td><td><div class="metercell"><span class="meter"><i style="width:34%"></i></span><span class="num">0.55</span></div></td><td><div class="metercell"><span class="meter"><i style="width:100%"></i></span><span class="num hi">1.60</span></div></td><td><span class="num">0.45</span></td><td><span class="num">0.55</span></td><td><span class="num lo">0.35</span></td><td><span class="diff d1">Low</span></td></tr>
+          <tr class="searchable" data-search="druid shapeshift flex healer melee support carrier"><td><b>Druid</b></td><td>Flex</td><td><div class="metercell"><span class="meter"><i style="width:44%"></i></span><span class="num">0.70</span></div></td><td><div class="metercell"><span class="meter"><i style="width:66%"></i></span><span class="num">1.05</span></div></td><td><span class="num hi">0.85</span></td><td><span class="num">0.70</span></td><td><span class="num">0.60</span></td><td><span class="diff d3">High</span></td></tr>
+          <tr class="searchable" data-search="minstrel bard buffs debuffs support amplifier"><td><b>Minstrel</b></td><td>Amplifier</td><td><div class="metercell"><span class="meter"><i style="width:28%"></i></span><span class="num lo">0.45</span></div></td><td><div class="metercell"><span class="meter"><i style="width:50%"></i></span><span class="num">0.80</span></div></td><td><span class="num">0.75</span></td><td><span class="num hi">1.10</span></td><td><span class="num">0.60</span></td><td><span class="diff d2">Medium</span></td></tr>
+          <tr class="searchable" data-search="bowman ranged burst carrier kite reposition precision"><td><b>Bowman</b></td><td>Carrier</td><td><div class="metercell"><span class="meter"><i style="width:66%"></i></span><span class="num hi">1.05</span></div></td><td><div class="metercell"><span class="meter"><i style="width:44%"></i></span><span class="num">0.70</span></div></td><td><span class="num lo">0.10</span></td><td><span class="num lo">0.45</span></td><td><span class="num hi">0.85</span></td><td><span class="diff d2">Medium</span></td></tr>
+          <tr class="searchable" data-search="cleric primary healer support sustain cleanse resurrection"><td><b>Cleric</b></td><td>Healer</td><td><div class="metercell"><span class="meter"><i style="width:22%"></i></span><span class="num lo">0.35</span></div></td><td><div class="metercell"><span class="meter"><i style="width:53%"></i></span><span class="num">0.85</span></div></td><td><span class="num hi">1.60</span></td><td><span class="num">0.65</span></td><td><span class="num lo">0.45</span></td><td><span class="diff d2">Medium</span></td></tr>
+          <tr class="searchable" data-search="alchemist crafter combatant bombs coatings support carrier resource"><td><b>Alchemist</b></td><td>Flex</td><td><div class="metercell"><span class="meter"><i style="width:53%"></i></span><span class="num">0.85</span></div></td><td><div class="metercell"><span class="meter"><i style="width:47%"></i></span><span class="num">0.75</span></div></td><td><span class="num">0.55</span></td><td><span class="num hi">0.95</span></td><td><span class="num lo">0.50</span></td><td><span class="diff d3">High</span></td></tr>
+          <tr class="searchable" data-search="mage arcane caster highest magic damage control fragile carrier"><td><b>Mage</b></td><td>Carrier</td><td><div class="metercell"><span class="meter"><i style="width:75%"></i></span><span class="num hi">1.20</span></div></td><td><div class="metercell"><span class="meter"><i style="width:38%"></i></span><span class="num lo">0.60</span></div></td><td><span class="num lo">0.10</span></td><td><span class="num">0.70</span></td><td><span class="num lo">0.40</span></td><td><span class="diff d3">High</span></td></tr>
+          <tr class="searchable" data-search="monk discipline duelist mobility counters high skill expression carrier"><td><b>Monk</b></td><td>Carrier</td><td><div class="metercell"><span class="meter"><i style="width:69%"></i></span><span class="num hi">1.10</span></div></td><td><div class="metercell"><span class="meter"><i style="width:50%"></i></span><span class="num">0.80</span></div></td><td><span class="num lo">0.30</span></td><td><span class="num lo">0.35</span></td><td><span class="num hi">0.95</span></td><td><span class="diff d4">Very high</span></td></tr>
+          <tr class="searchable" data-search="tracker exploration pathfinder utility traps control key fragments carrier"><td><b>Tracker</b></td><td>Pathfinder</td><td><div class="metercell"><span class="meter"><i style="width:47%"></i></span><span class="num">0.75</span></div></td><td><div class="metercell"><span class="meter"><i style="width:47%"></i></span><span class="num">0.75</span></div></td><td><span class="num lo">0.20</span></td><td><span class="num hi">1.20</span></td><td><span class="num hi">0.90</span></td><td><span class="diff d3">High</span></td></tr>
+          <tr class="searchable" data-search="assassin burst infiltration stealth single target highest ceiling fragile carrier"><td><b>Assassin</b></td><td>Carrier</td><td><div class="metercell"><span class="meter"><i style="width:78%"></i></span><span class="num hi">1.25</span></div></td><td><div class="metercell"><span class="meter"><i style="width:34%"></i></span><span class="num lo">0.55</span></div></td><td><span class="num lo">0.10</span></td><td><span class="num lo">0.50</span></td><td><span class="num hi">1.00</span></td><td><span class="diff d4">Very high</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Stat priorities</span><h2>Where to spend points</h2></div><p>Primary stat drives the class's main formula; the dump stat can be safely traded away. Cross-reference the <a href="formulae.html">Formulae</a> page for exact scalars.</p></div>
+      <div class="panel"><table>
+        <thead><tr><th>Class</th><th>Primary</th><th>Secondary</th><th>Tertiary</th><th>Dump</th></tr></thead>
+        <tbody>
+          <tr class="searchable" data-search="warrior stat priority str con dex wis"><td><b>Warrior</b></td><td>STR</td><td>CON</td><td>DEX</td><td>WIS</td></tr>
+          <tr class="searchable" data-search="guardian stat priority con str wis dex agi"><td><b>Guardian</b></td><td>CON</td><td>STR</td><td>WIS</td><td>AGI</td></tr>
+          <tr class="searchable" data-search="druid stat priority wis con int agi"><td><b>Druid</b></td><td>WIS</td><td>CON</td><td>INT</td><td>LUCK</td></tr>
+          <tr class="searchable" data-search="minstrel stat priority wis int dex str"><td><b>Minstrel</b></td><td>WIS</td><td>INT</td><td>DEX</td><td>STR</td></tr>
+          <tr class="searchable" data-search="bowman stat priority dex agi luck con"><td><b>Bowman</b></td><td>DEX</td><td>AGI</td><td>LUCK</td><td>CON</td></tr>
+          <tr class="searchable" data-search="cleric stat priority wis int con str"><td><b>Cleric</b></td><td>WIS</td><td>INT</td><td>CON</td><td>STR</td></tr>
+          <tr class="searchable" data-search="alchemist stat priority int dex wis str"><td><b>Alchemist</b></td><td>INT</td><td>DEX</td><td>WIS</td><td>STR</td></tr>
+          <tr class="searchable" data-search="mage stat priority int wis luck con"><td><b>Mage</b></td><td>INT</td><td>WIS</td><td>LUCK</td><td>CON</td></tr>
+          <tr class="searchable" data-search="monk stat priority agi dex con luck"><td><b>Monk</b></td><td>AGI</td><td>DEX</td><td>CON</td><td>INT</td></tr>
+          <tr class="searchable" data-search="tracker stat priority dex agi wis str"><td><b>Tracker</b></td><td>DEX</td><td>AGI</td><td>WIS</td><td>STR</td></tr>
+          <tr class="searchable" data-search="assassin stat priority agi dex luck wis"><td><b>Assassin</b></td><td>AGI</td><td>DEX</td><td>LUCK</td><td>WIS</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Skill level requirements</span><h2>Unlock &amp; mastery schedule</h2></div><p>For each skill: the character level it unlocks, the level at which its <b>Level Master</b> feat can be completed, and the feat itself. Types are <span class="stype mas">Mastery</span> <span class="stype act">Active</span> <span class="stype pas">Passive</span> <span class="stype ult">Ultimate</span>.</p></div>
+
+      <details class="class-block searchable" data-search="warrior skill requirements sword axe blunt mastery focus bash charge cross flash disassemble whirlwind dual wielding quicken fury" open>
+        <summary>Warrior <span class="role-note">Carrier &middot; STR/CON</span></summary>
+        <div class="panel"><table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Unlock Lv</th><th>Master Lv</th><th>Feat to reach Master</th></tr></thead>
+          <tbody>
+            <tr><td>Sword Mastery</td><td><span class="stype mas">Mastery</span></td><td class="num">1</td><td class="num">60</td><td>4,000 sword kills + 500 critical hits</td></tr>
+            <tr><td>Axe Mastery</td><td><span class="stype mas">Mastery</span></td><td class="num">4</td><td class="num">62</td><td>4,000 axe kills + fell a Ferrus-tier foe</td></tr>
+            <tr><td>Blunt Mastery</td><td><span class="stype mas">Mastery</span></td><td class="num">8</td><td class="num">64</td><td>4,000 blunt kills + 300 stuns</td></tr>
+            <tr><td>Bash</td><td><span class="stype act">Active</span></td><td class="num">3</td><td class="num">45</td><td>800 hits, 200 crits, defeat a stronger monster with Bash</td></tr>
+            <tr><td>Focus</td><td><span class="stype pas">Passive</span></td><td class="num">6</td><td class="num">40</td><td>Land 1,000 hits without a miss</td></tr>
+            <tr><td>Charge Attack</td><td><span class="stype act">Active</span></td><td class="num">12</td><td class="num">50</td><td>600 charges landed from 8m+</td></tr>
+            <tr><td>Cross Attack</td><td><span class="stype act">Active</span></td><td class="num">20</td><td class="num">55</td><td>400 dual-hit combos</td></tr>
+            <tr><td>Flash Attack</td><td><span class="stype act">Active</span></td><td class="num">28</td><td class="num">58</td><td>300 first-strike openers</td></tr>
+            <tr><td>Disassemble Defense</td><td><span class="stype act">Active</span></td><td class="num">34</td><td class="num">66</td><td>Shatter 500 shields or armour plates</td></tr>
+            <tr><td>Whirlwind</td><td><span class="stype act">Active</span></td><td class="num">42</td><td class="num">70</td><td>200 multi-hits striking 3+ foes</td></tr>
+            <tr><td>Dual-Wielding Quicken</td><td><span class="stype pas">Passive</span></td><td class="num">48</td><td class="num">72</td><td>1,500 off-hand strikes</td></tr>
+            <tr><td>Fury</td><td><span class="stype ult">Ultimate</span></td><td class="num">55</td><td class="num">80</td><td>Win 100 fights while below 20% HP</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <details class="class-block searchable" data-search="guardian skill requirements shield mastery spear hp recovery anchor howl swing piercing thrust spear quicken boomerang spike stone age">
+        <summary>Guardian <span class="role-note">Tank &middot; CON/STR</span></summary>
+        <div class="panel"><table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Unlock Lv</th><th>Master Lv</th><th>Feat to reach Master</th></tr></thead>
+          <tbody>
+            <tr><td>Shield Mastery</td><td><span class="stype mas">Mastery</span></td><td class="num">1</td><td class="num">58</td><td>Block 6,000 hits; survive a boss below 10% HP</td></tr>
+            <tr><td>Spear Mastery</td><td><span class="stype mas">Mastery</span></td><td class="num">6</td><td class="num">60</td><td>4,000 spear kills incl. 300 reach kills</td></tr>
+            <tr><td>HP Recovery</td><td><span class="stype pas">Passive</span></td><td class="num">4</td><td class="num">40</td><td>Recover 1,000,000 HP out of combat</td></tr>
+            <tr><td>Anchor Howl</td><td><span class="stype act">Active</span></td><td class="num">10</td><td class="num">48</td><td>Hold aggro on 500 elite enemies</td></tr>
+            <tr><td>Shield Swing</td><td><span class="stype act">Active</span></td><td class="num">14</td><td class="num">50</td><td>800 shield hits, 200 stuns</td></tr>
+            <tr><td>Piercing Thrust</td><td><span class="stype act">Active</span></td><td class="num">22</td><td class="num">55</td><td>600 armour-piercing kills</td></tr>
+            <tr><td>Spear Quicken</td><td><span class="stype pas">Passive</span></td><td class="num">30</td><td class="num">62</td><td>1,500 fast thrusts</td></tr>
+            <tr><td>Boomerang Shield</td><td><span class="stype act">Active</span></td><td class="num">38</td><td class="num">66</td><td>400 ranged shield hits striking 2+ foes</td></tr>
+            <tr><td>Spike Shield</td><td><span class="stype act">Active</span></td><td class="num">46</td><td class="num">70</td><td>Reflect 300,000 damage</td></tr>
+            <tr><td>Stone Age</td><td><span class="stype ult">Ultimate</span></td><td class="num">55</td><td class="num">80</td><td>Shield 200 allies from lethal blows</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <details class="class-block searchable" data-search="druid skill requirements natures language transformation mastery healing roots iron paws croc bite tail whip headbutt roar pack formation druid bond">
+        <summary>Druid <span class="role-note">Flex &middot; WIS/CON</span></summary>
+        <div class="panel"><table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Unlock Lv</th><th>Master Lv</th><th>Feat to reach Master</th></tr></thead>
+          <tbody>
+            <tr><td>Nature's Language</td><td><span class="stype pas">Passive</span></td><td class="num">1</td><td class="num">45</td><td>Pacify or read 800 beasts</td></tr>
+            <tr><td>Transformation Mastery</td><td><span class="stype mas">Mastery</span></td><td class="num">5</td><td class="num">60</td><td>3,000 shifts; master three forms</td></tr>
+            <tr><td>Healing Roots</td><td><span class="stype act">Active</span></td><td class="num">3</td><td class="num">48</td><td>Heal 800,000 HP through roots</td></tr>
+            <tr><td>Iron Paws</td><td><span class="stype pas">Passive</span></td><td class="num">12</td><td class="num">52</td><td>1,500 beast-form strikes</td></tr>
+            <tr><td>Croc Bite</td><td><span class="stype act">Active</span></td><td class="num">16</td><td class="num">54</td><td>600 bite finishers</td></tr>
+            <tr><td>Tail Whip</td><td><span class="stype act">Active</span></td><td class="num">22</td><td class="num">56</td><td>400 knockdowns</td></tr>
+            <tr><td>Headbutt</td><td><span class="stype act">Active</span></td><td class="num">28</td><td class="num">58</td><td>300 stuns in beast form</td></tr>
+            <tr><td>Roar</td><td><span class="stype act">Active</span></td><td class="num">34</td><td class="num">62</td><td>Fear 500 enemies</td></tr>
+            <tr><td>Pack Formation</td><td><span class="stype pas">Passive</span></td><td class="num">42</td><td class="num">66</td><td>Fight 200 battles beside bonded beasts</td></tr>
+            <tr><td>Druid Bond</td><td><span class="stype ult">Ultimate</span></td><td class="num">55</td><td class="num">80</td><td>Bond with a Floor VI+ beast</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <details class="class-block searchable" data-search="minstrel skill requirements instrument mastery pentatonic scale arpeggios vibratos elves lullaby tales onamuji human march ashihara cult sun kushinada faith tribute iii gods">
+        <summary>Minstrel <span class="role-note">Amplifier &middot; WIS/INT</span></summary>
+        <div class="panel"><table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Unlock Lv</th><th>Master Lv</th><th>Feat to reach Master</th></tr></thead>
+          <tbody>
+            <tr><td>Instrument Mastery</td><td><span class="stype mas">Mastery</span></td><td class="num">1</td><td class="num">58</td><td>5,000 songs held to full duration</td></tr>
+            <tr><td>Pentatonic Scale</td><td><span class="stype pas">Passive</span></td><td class="num">4</td><td class="num">42</td><td>Chain 1,000 note sequences</td></tr>
+            <tr><td>Arpeggios</td><td><span class="stype act">Active</span></td><td class="num">8</td><td class="num">48</td><td>Sustain 600 haste windows</td></tr>
+            <tr><td>Vibratos</td><td><span class="stype act">Active</span></td><td class="num">14</td><td class="num">50</td><td>Hold 400 debuffs to full duration</td></tr>
+            <tr><td>Elves' Lullaby</td><td><span class="stype act">Active</span></td><td class="num">20</td><td class="num">54</td><td>Sleep 500 enemies</td></tr>
+            <tr><td>Tales of Onamuji</td><td><span class="stype act">Active</span></td><td class="num">28</td><td class="num">58</td><td>Buff 400 allied critical hits</td></tr>
+            <tr><td>The Human March to Ashihara</td><td><span class="stype act">Active</span></td><td class="num">34</td><td class="num">62</td><td>March 300 fights without a party wipe</td></tr>
+            <tr><td>Cult of the Sun</td><td><span class="stype act">Active</span></td><td class="num">42</td><td class="num">66</td><td>Cleanse 300 curses through song</td></tr>
+            <tr><td>Kushinada's Faith</td><td><span class="stype act">Active</span></td><td class="num">48</td><td class="num">70</td><td>Rally a party from a near-wipe 100 times</td></tr>
+            <tr><td>Tribute to the III Gods</td><td><span class="stype ult">Ultimate</span></td><td class="num">58</td><td class="num">82</td><td>Complete a full raid clear as the sole bard</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <details class="class-block searchable" data-search="bowman skill requirements bow mastery fire shot fast fingers eagle eye piercing arrow arrow shower silent quiver rain step">
+        <summary>Bowman <span class="role-note">Carrier &middot; DEX/AGI</span></summary>
+        <div class="panel"><table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Unlock Lv</th><th>Master Lv</th><th>Feat to reach Master</th></tr></thead>
+          <tbody>
+            <tr><td>Bow Mastery</td><td><span class="stype mas">Mastery</span></td><td class="num">1</td><td class="num">58</td><td>5,000 bow kills; 800 headshots</td></tr>
+            <tr><td>Fire Shot</td><td><span class="stype act">Active</span></td><td class="num">3</td><td class="num">45</td><td>800 ignite kills</td></tr>
+            <tr><td>Fast Fingers</td><td><span class="stype pas">Passive</span></td><td class="num">6</td><td class="num">42</td><td>2,000 rapid volleys</td></tr>
+            <tr><td>Eagle Eye</td><td><span class="stype pas">Passive</span></td><td class="num">12</td><td class="num">48</td><td>600 crits at maximum range</td></tr>
+            <tr><td>Piercing Arrow</td><td><span class="stype act">Active</span></td><td class="num">18</td><td class="num">54</td><td>400 line-pierce multi-kills</td></tr>
+            <tr><td>Arrow Shower</td><td><span class="stype act">Active</span></td><td class="num">26</td><td class="num">58</td><td>300 barrages hitting 4+ foes</td></tr>
+            <tr><td>Silent Quiver</td><td><span class="stype pas">Passive</span></td><td class="num">34</td><td class="num">62</td><td>800 shots without breaking stealth</td></tr>
+            <tr><td>Rain Step</td><td><span class="stype ult">Ultimate</span></td><td class="num">50</td><td class="num">78</td><td>Kite a floor boss solo for 90 seconds</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <details class="class-block searchable" data-search="cleric skill requirements heal purify barrier sanctuary nessa remedy sunlit prayer resurrection last light">
+        <summary>Cleric <span class="role-note">Healer &middot; WIS/INT</span></summary>
+        <div class="panel"><table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Unlock Lv</th><th>Master Lv</th><th>Feat to reach Master</th></tr></thead>
+          <tbody>
+            <tr><td>Heal</td><td><span class="stype act">Active</span></td><td class="num">1</td><td class="num">55</td><td>Heal 2,000,000 HP</td></tr>
+            <tr><td>Purify</td><td><span class="stype act">Active</span></td><td class="num">4</td><td class="num">48</td><td>Cleanse 800 curses or poisons</td></tr>
+            <tr><td>Barrier</td><td><span class="stype act">Active</span></td><td class="num">8</td><td class="num">50</td><td>Absorb 1,000,000 damage</td></tr>
+            <tr><td>Sanctuary</td><td><span class="stype act">Active</span></td><td class="num">16</td><td class="num">56</td><td>Sustain 300 safe zones under fire</td></tr>
+            <tr><td>Nessa's Remedy</td><td><span class="stype act">Active</span></td><td class="num">24</td><td class="num">60</td><td>Cure 200 plague-tier ailments</td></tr>
+            <tr><td>Sunlit Prayer</td><td><span class="stype act">Active</span></td><td class="num">32</td><td class="num">64</td><td>Burn 400 Yomi or undead foes with light</td></tr>
+            <tr><td>Resurrection</td><td><span class="stype act">Active</span></td><td class="num">40</td><td class="num">70</td><td>Revive 300 fallen allies</td></tr>
+            <tr><td>Last Light</td><td><span class="stype ult">Ultimate</span></td><td class="num">55</td><td class="num">82</td><td>Save a full party from a wipe 50 times</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <details class="class-block searchable" data-search="alchemist skill requirements bomb craft potion toss acid flask smoke vial elemental coating transmute half face formula">
+        <summary>Alchemist <span class="role-note">Flex &middot; INT/DEX</span></summary>
+        <div class="panel"><table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Unlock Lv</th><th>Master Lv</th><th>Feat to reach Master</th></tr></thead>
+          <tbody>
+            <tr><td>Bomb Craft</td><td><span class="stype mas">Mastery</span></td><td class="num">1</td><td class="num">55</td><td>Craft and land 3,000 bombs</td></tr>
+            <tr><td>Potion Toss</td><td><span class="stype act">Active</span></td><td class="num">3</td><td class="num">44</td><td>Deliver 1,000 thrown potions</td></tr>
+            <tr><td>Acid Flask</td><td><span class="stype act">Active</span></td><td class="num">8</td><td class="num">50</td><td>600 armour-melt kills</td></tr>
+            <tr><td>Smoke Vial</td><td><span class="stype act">Active</span></td><td class="num">14</td><td class="num">52</td><td>Break line-of-sight 400 times</td></tr>
+            <tr><td>Elemental Coating</td><td><span class="stype act">Active</span></td><td class="num">22</td><td class="num">58</td><td>Apply 800 elemental coatings</td></tr>
+            <tr><td>Transmute</td><td><span class="stype pas">Passive</span></td><td class="num">30</td><td class="num">64</td><td>Convert 2,000 reagents in the field</td></tr>
+            <tr><td>Half-Face Formula</td><td><span class="stype ult">Ultimate</span></td><td class="num">52</td><td class="num">80</td><td>Survive 100 fights via self-transmutation</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <details class="class-block searchable" data-search="mage skill requirements arcane bolt fire orb moonbind sea ward storm gate yomi counterspell meteoric seal">
+        <summary>Mage <span class="role-note">Carrier &middot; INT/WIS</span></summary>
+        <div class="panel"><table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Unlock Lv</th><th>Master Lv</th><th>Feat to reach Master</th></tr></thead>
+          <tbody>
+            <tr><td>Arcane Bolt</td><td><span class="stype mas">Mastery</span></td><td class="num">1</td><td class="num">55</td><td>5,000 spell kills</td></tr>
+            <tr><td>Fire Orb</td><td><span class="stype act">Active</span></td><td class="num">4</td><td class="num">46</td><td>800 burn kills</td></tr>
+            <tr><td>Moonbind</td><td><span class="stype act">Active</span></td><td class="num">10</td><td class="num">52</td><td>Root or silence 600 casters</td></tr>
+            <tr><td>Sea Ward</td><td><span class="stype act">Active</span></td><td class="num">18</td><td class="num">56</td><td>Absorb 800,000 magic damage</td></tr>
+            <tr><td>Storm Gate</td><td><span class="stype act">Active</span></td><td class="num">26</td><td class="num">60</td><td>400 chain-lightning multi-kills</td></tr>
+            <tr><td>Yomi Counterspell</td><td><span class="stype act">Active</span></td><td class="num">34</td><td class="num">64</td><td>Interrupt 500 enemy casts</td></tr>
+            <tr><td>Meteoric Seal</td><td><span class="stype ult">Ultimate</span></td><td class="num">52</td><td class="num">82</td><td>Wipe a full elite pack in one cast 100 times</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <details class="class-block searchable" data-search="monk skill requirements fist mastery ki flow palm break counter stance lion step spirit bell demigod discipline">
+        <summary>Monk <span class="role-note">Carrier &middot; AGI/DEX</span></summary>
+        <div class="panel"><table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Unlock Lv</th><th>Master Lv</th><th>Feat to reach Master</th></tr></thead>
+          <tbody>
+            <tr><td>Fist Mastery</td><td><span class="stype mas">Mastery</span></td><td class="num">1</td><td class="num">58</td><td>5,000 unarmed kills; 800 crits</td></tr>
+            <tr><td>Ki Flow</td><td><span class="stype pas">Passive</span></td><td class="num">4</td><td class="num">44</td><td>Sustain 2,000 combos without dropping</td></tr>
+            <tr><td>Palm Break</td><td><span class="stype act">Active</span></td><td class="num">8</td><td class="num">50</td><td>600 guard-break finishers</td></tr>
+            <tr><td>Counter Stance</td><td><span class="stype act">Active</span></td><td class="num">16</td><td class="num">56</td><td>Counter 500 telegraphed attacks</td></tr>
+            <tr><td>Lion Step</td><td><span class="stype pas">Passive</span></td><td class="num">24</td><td class="num">60</td><td>1,000 dash-cancels</td></tr>
+            <tr><td>Spirit Bell</td><td><span class="stype act">Active</span></td><td class="num">34</td><td class="num">66</td><td>Stun 400 foes with resonance</td></tr>
+            <tr><td>Demigod Discipline</td><td><span class="stype ult">Ultimate</span></td><td class="num">55</td><td class="num">84</td><td>Win 50 duels while in the Demi-God state</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <details class="class-block searchable" data-search="tracker skill requirements tracking trap crafting mark prey beast lore silence field shadow compass trail of sparks">
+        <summary>Tracker <span class="role-note">Pathfinder &middot; DEX/AGI</span></summary>
+        <div class="panel"><table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Unlock Lv</th><th>Master Lv</th><th>Feat to reach Master</th></tr></thead>
+          <tbody>
+            <tr><td>Tracking</td><td><span class="stype pas">Passive</span></td><td class="num">1</td><td class="num">48</td><td>Trail 1,000 monsters to their dens</td></tr>
+            <tr><td>Trap Crafting</td><td><span class="stype mas">Mastery</span></td><td class="num">3</td><td class="num">55</td><td>Craft and trigger 2,000 traps</td></tr>
+            <tr><td>Mark Prey</td><td><span class="stype act">Active</span></td><td class="num">8</td><td class="num">50</td><td>Mark 800 elite targets</td></tr>
+            <tr><td>Beast Lore</td><td><span class="stype pas">Passive</span></td><td class="num">14</td><td class="num">52</td><td>Log 300 species' weak points</td></tr>
+            <tr><td>Silence Field</td><td><span class="stype act">Active</span></td><td class="num">22</td><td class="num">58</td><td>Mute 400 casters in the field</td></tr>
+            <tr><td>Shadow Compass</td><td><span class="stype act">Active</span></td><td class="num">32</td><td class="num">64</td><td>Find 200 hidden key fragments</td></tr>
+            <tr><td>Trail of Sparks</td><td><span class="stype ult">Ultimate</span></td><td class="num">50</td><td class="num">80</td><td>Map a full floor before any rival party 25 times</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <details class="class-block searchable" data-search="assassin skill requirements dagger mastery katar vanish backcut bleeding edge smoke step phantom kiss">
+        <summary>Assassin <span class="role-note">Carrier &middot; AGI/DEX</span></summary>
+        <div class="panel"><table>
+          <thead><tr><th>Skill</th><th>Type</th><th>Unlock Lv</th><th>Master Lv</th><th>Feat to reach Master</th></tr></thead>
+          <tbody>
+            <tr><td>Dagger Mastery</td><td><span class="stype mas">Mastery</span></td><td class="num">1</td><td class="num">58</td><td>4,000 dagger kills; 1,000 backstabs</td></tr>
+            <tr><td>Katar Mastery</td><td><span class="stype mas">Mastery</span></td><td class="num">6</td><td class="num">60</td><td>4,000 katar kills; 600 crits</td></tr>
+            <tr><td>Vanish</td><td><span class="stype act">Active</span></td><td class="num">4</td><td class="num">46</td><td>Break combat via stealth 800 times</td></tr>
+            <tr><td>Backcut</td><td><span class="stype act">Active</span></td><td class="num">12</td><td class="num">52</td><td>600 backstab openers</td></tr>
+            <tr><td>Bleeding Edge</td><td><span class="stype act">Active</span></td><td class="num">20</td><td class="num">56</td><td>Land 500 stacked bleeds</td></tr>
+            <tr><td>Smoke Step</td><td><span class="stype pas">Passive</span></td><td class="num">30</td><td class="num">62</td><td>1,000 cooldown-free repositions</td></tr>
+            <tr><td>Phantom Kiss</td><td><span class="stype ult">Ultimate</span></td><td class="num">52</td><td class="num">82</td><td>Assassinate 100 elites before they act</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Tuning notes</span><h2>Open balance levers</h2></div></div>
+      <div class="callout warn searchable" data-search="tuning levers open questions demigod cooldown burst assassin mage ehp mastery feat pacing weapon mastery rule race multipliers"><ul>
+        <li>Assassin and Mage sit at the 1.25 / 1.20 damage ceiling; if burst feels oppressive, cut their EHP before touching DPS.</li>
+        <li>Ultimate feats gate at Lv 78&ndash;84 on purpose &mdash; they should land near the top floors, not before.</li>
+        <li>The <a href="formulae.html">Weapon Mastery Rule</a> (30% &rarr; 100%) means an unmastered class plays at ~60% of these indices; pace early floors around that.</li>
+        <li>Re-check every index after any change to race multipliers on the <a href="races.html">Races</a> page.</li>
+      </ul></div>
+    </section>
+
+    <div class="pagelinks">
+      <a href="classes.html"><small>Previous</small><b>&larr; Classes</b></a>
+      <a class="next" href="jobs.html"><small>Next</small><b>Jobs &amp; Economy &rarr;</b></a>
+    </div>
+    <p class="no-results">No rows match your filter.</p>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

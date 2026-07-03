@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LONX Online - The Tower of Yomi</title>
+  <meta name="description" content="LONX Online: a mythic MMORPG where an entire server climbs Izanami's twelve-floor tower to reclaim the world of Sekai. Explore the complete game bible." />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/landing.css" />
+</head>
+<body class="lp">
+
+  <!-- Top bar -->
+  <nav class="lp-nav" id="lpnav">
+    <a class="lp-brand" href="#top"><span class="sigil"></span><span><b>LONX Online</b><small>The Tower of Yomi</small></span></a>
+    <div class="links">
+      <a class="hide-sm" href="#world">World</a>
+      <a class="hide-sm" href="#cast">Characters</a>
+      <a class="hide-sm" href="#climb">The Climb</a>
+      <a class="lp-cta" href="pages/overview.html">Read the full docs &rarr;</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="lp-hero" id="top">
+    <div class="hero-art">
+      <div class="layer sky">
+        <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0a0714"/><stop offset=".5" stop-color="#180f28"/>
+              <stop offset=".78" stop-color="#2c1330"/><stop offset="1" stop-color="#40182a"/>
+            </linearGradient>
+            <radialGradient id="moonG"><stop offset="0" stop-color="#fff6df"/><stop offset=".6" stop-color="#f6c863"/><stop offset="1" stop-color="#e98263"/></radialGradient>
+            <radialGradient id="moonHalo"><stop offset="0" stop-color="#f6c863" stop-opacity=".45"/><stop offset="1" stop-color="#f6c863" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect width="1600" height="900" fill="url(#skyG)"/>
+          <circle cx="1230" cy="240" r="380" fill="url(#moonHalo)"/>
+          <circle cx="1230" cy="240" r="132" fill="url(#moonG)"/>
+          <circle cx="1188" cy="212" r="130" fill="#150e26"/>
+        </svg>
+      </div>
+      <div class="stars"></div>
+      <div class="layer ridge-far" data-parallax="-0.05">
+        <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <path d="M0 640 L200 500 L360 590 L520 450 L700 600 L880 430 L1060 600 L1240 500 L1420 610 L1600 520 L1600 900 L0 900Z" fill="#241a3c" opacity=".75"/>
+          <path d="M0 720 L180 620 L380 700 L560 600 L760 700 L980 610 L1180 710 L1380 620 L1600 700 L1600 900 L0 900Z" fill="#1b1330" opacity=".9"/>
+        </svg>
+      </div>
+      <div class="layer tower" data-parallax="0.05">
+        <svg class="art" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="towerBody" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0b0816"/><stop offset=".5" stop-color="#181026"/><stop offset="1" stop-color="#2a1836"/></linearGradient>
+            <linearGradient id="roofG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1a1030"/><stop offset="1" stop-color="#3a2050"/></linearGradient>
+            <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6c863"/><stop offset=".55" stop-color="#d74b5c"/><stop offset="1" stop-color="#9c71ff"/></linearGradient>
+            <radialGradient id="beaconH"><stop offset="0" stop-color="#f6c863" stop-opacity=".8"/><stop offset="1" stop-color="#f6c863" stop-opacity="0"/></radialGradient>
+          </defs>
+          <path d="M706 1000 L748 205 L852 205 L894 1000 Z" fill="url(#towerBody)"/>
+          <line x1="800" y1="220" x2="800" y2="1000" stroke="#000" stroke-opacity=".25" stroke-width="2"/>
+          <g fill="url(#roofG)" stroke="#000" stroke-opacity=".35" stroke-width="1.5">
+            <path d="M650 880 Q800 820 950 880 L926 900 Q800 858 674 900 Z"/>
+            <path d="M668 720 Q800 664 932 720 L910 740 Q800 700 690 740 Z"/>
+            <path d="M688 575 Q800 523 912 575 L892 594 Q800 556 708 594 Z"/>
+            <path d="M708 445 Q800 399 892 445 L874 462 Q800 428 726 462 Z"/>
+            <path d="M728 330 Q800 291 872 330 L856 345 Q800 315 744 345 Z"/>
+            <path d="M746 235 Q800 203 854 235 L840 248 Q800 223 760 248 Z"/>
+          </g>
+          <g fill="#f6c863" class="tw-win">
+            <rect x="792" y="300" width="16" height="26" rx="4"/>
+            <rect x="792" y="392" width="16" height="26" rx="4"/>
+            <rect x="790" y="500" width="20" height="30" rx="4"/>
+            <rect x="788" y="640" width="24" height="32" rx="5"/>
+            <rect x="786" y="800" width="28" height="36" rx="5"/>
+          </g>
+          <g fill="#d74b5c" opacity=".85">
+            <path d="M690 590 L706 590 L706 690 L698 678 L690 690 Z"/>
+            <path d="M894 590 L910 590 L910 690 L902 678 L894 690 Z"/>
+          </g>
+          <circle cx="800" cy="180" r="70" fill="url(#beaconH)" class="tw-beacon"/>
+          <circle cx="800" cy="180" r="15" fill="url(#tg)"/>
+          <path d="M800 150 L806 174 L800 205 L794 174 Z" fill="url(#tg)"/>
+        </svg>
+      </div>
+      <div class="mist m1"></div>
+      <div class="mist m2"></div>
+      <div class="layer ridge-near" data-parallax="0.20">
+        <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <path d="M0 700 L140 640 L300 700 L440 620 L560 690 L600 900 L0 900Z" fill="#050309"/>
+          <path d="M1000 690 L1140 610 L1300 700 L1460 620 L1600 690 L1600 900 L980 900Z" fill="#050309"/>
+          <line x1="150" y1="470" x2="150" y2="662" stroke="#0c0a14" stroke-width="6"/>
+          <path d="M150 476 L214 494 L150 512 Z" fill="#d74b5c"/>
+          <circle cx="120" cy="628" r="10" fill="#0c0a14"/><circle cx="150" cy="640" r="11" fill="#0c0a14"/>
+          <circle cx="96" cy="612" r="6" fill="#f6c863" opacity=".9"/>
+        </svg>
+      </div>
+      <div class="hero-vignette"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="lp-eyebrow">A mythic MMORPG</span>
+      <h1 class="lp-title">LONX ONLINE</h1>
+      <p class="lp-sub">The Tower of Yomi</p>
+      <p class="lp-blurb">One server. One climb. Twelve floors between grief and the world it stole.</p>
+      <div class="cta-row">
+        <a class="btn-lg primary" href="pages/overview.html">Enter the world</a>
+        <a class="btn-lg ghost" href="#world">See more</a>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#world" aria-label="Scroll down"><span class="dot"></span>Scroll</a>
+  </header>
+
+  <!-- Two worlds -->
+  <section class="lp-sec" id="world">
+    <div class="sec-head center">
+      <span class="lp-kicker reveal">Two realms, one fate</span>
+      <h2 class="lp-h reveal d1">A living world and the grief that swallowed it</h2>
+      <p class="lp-lead reveal d2">Above, the world you fight to reclaim. Below, the grief that swallowed it.</p>
+    </div>
+    <div class="worlds">
+      <div class="world reveal" data-world="sekai" role="button" tabindex="0" aria-label="Sekai lore">
+        <div class="scene sekai">
+          <svg class="art" viewBox="0 0 800 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="skS" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f9d9a0"/><stop offset=".5" stop-color="#efb27a"/><stop offset="1" stop-color="#7fb0c9"/></linearGradient>
+              <radialGradient id="sunS"><stop offset="0" stop-color="#fff7e2"/><stop offset="1" stop-color="#f6c863"/></radialGradient>
+            </defs>
+            <rect width="800" height="460" fill="url(#skS)"/>
+            <circle cx="580" cy="150" r="150" fill="#fff2cf" opacity=".5"/>
+            <circle cx="580" cy="150" r="60" fill="url(#sunS)"/>
+            <g stroke="#2a3b3a" stroke-width="2" fill="none" opacity=".6"><path d="M120 120 q10 -8 20 0 q10 -8 20 0"/><path d="M180 150 q8 -6 16 0 q8 -6 16 0"/></g>
+            <path d="M0 300 Q200 250 420 300 T800 300 L800 460 L0 460Z" fill="#6ea36f"/>
+            <g fill="#3c5c52"><rect x="270" y="312" width="24" height="30"/><rect x="300" y="300" width="30" height="42"/><path d="M298 302 L315 284 L332 302Z"/><rect x="340" y="290" width="22" height="52"/><path d="M338 292 L351 276 L364 292Z"/></g>
+            <path d="M0 350 Q240 300 480 350 T800 350 L800 460 L0 460Z" fill="#4f8a5c"/>
+            <rect x="0" y="412" width="800" height="48" fill="#3a6ea5"/>
+            <g fill="#fff" opacity=".35"><rect x="120" y="426" width="60" height="3"/><rect x="300" y="434" width="90" height="3"/><rect x="520" y="424" width="70" height="3"/></g>
+          </svg>
+        </div>
+        <div class="txt"><h3>Sekai</h3><p>Daylight, timber cities, the open sea &mdash; home, stolen back one floor at a time.</p><span class="world-more">Read its story &rarr;</span></div>
+      </div>
+      <div class="world reveal d1" data-world="yomi" role="button" tabindex="0" aria-label="Yomi lore">
+        <div class="scene yomi">
+          <svg class="art" viewBox="0 0 800 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="skY" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#180a1e"/><stop offset=".55" stop-color="#2c0f28"/><stop offset="1" stop-color="#4a1330"/></linearGradient>
+              <radialGradient id="moonY"><stop offset="0" stop-color="#ffb3bd"/><stop offset="1" stop-color="#d74b5c"/></radialGradient>
+            </defs>
+            <rect width="800" height="460" fill="url(#skY)"/>
+            <circle cx="240" cy="140" r="150" fill="#d74b5c" opacity=".18"/>
+            <circle cx="240" cy="140" r="62" fill="url(#moonY)"/>
+            <g stroke="#e7dcd8" stroke-width="4" fill="none" opacity=".5"><path d="M660 430 L660 300 M660 340 L620 300 M660 362 L700 322 M660 322 L636 288"/></g>
+            <g fill="#0d0710"><rect x="150" y="250" width="20" height="180"/><rect x="470" y="250" width="20" height="180"/><path d="M110 250 Q320 220 530 250 L530 268 Q320 240 110 268 Z"/><rect x="130" y="292" width="380" height="16"/></g>
+            <rect x="0" y="400" width="800" height="60" fill="#0a0510"/>
+            <ellipse cx="240" cy="430" rx="60" ry="10" fill="#d74b5c" opacity=".2"/>
+            <g fill="#f6c863"><circle cx="340" cy="360" r="5"/><circle cx="420" cy="330" r="4"/><circle cx="300" cy="332" r="3.5"/><circle cx="520" cy="358" r="4.5"/></g>
+          </svg>
+        </div>
+        <div class="txt"><h3>Yomi</h3><p>Ash, bone, and black water &mdash; every floor a wound in Izanami's memory.</p><span class="world-more">Read its story &rarr;</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Characters -->
+  <section class="lp-sec wide" id="cast">
+    <div class="sec-head center">
+      <span class="lp-kicker reveal">The cast</span>
+      <h2 class="lp-h reveal d1">Gods, princesses, and cursed things</h2>
+      <p class="lp-lead reveal d2">Behind every floor is a name &mdash; and a reason the world broke.</p>
+    </div>
+    <div class="char-grid">
+      <article class="char reveal" data-cast="izanami" role="button" tabindex="0">
+        <div class="face izanami">
+          <svg class="portrait" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><radialGradient id="izbg" cx="50%" cy="40%"><stop offset="0" stop-color="#5a1730"/><stop offset="1" stop-color="#160a14"/></radialGradient></defs>
+            <rect width="300" height="300" fill="url(#izbg)"/>
+            <path d="M60 300 C70 220 110 196 150 196 C190 196 230 220 240 300 Z" fill="#26101d"/>
+            <path d="M118 210 L150 240 L182 210 L182 300 L118 300 Z" fill="#3a1526"/>
+            <circle cx="150" cy="140" r="52" fill="#e9d9cf"/>
+            <path d="M150 92 L156 140 L150 190" stroke="#b5352f" stroke-width="2" fill="none" opacity=".7"/>
+            <path d="M96 130 C96 80 204 80 204 130 L204 152 C186 122 114 122 96 152 Z" fill="#150a14"/>
+            <path d="M112 96 C96 70 100 52 90 44 C112 54 122 78 122 98 Z" fill="#150a14"/>
+            <path d="M188 96 C204 70 200 52 210 44 C188 54 178 78 178 98 Z" fill="#150a14"/>
+            <g fill="#d74b5c"><ellipse cx="132" cy="146" rx="7" ry="4"/><ellipse cx="168" cy="146" rx="7" ry="4"/></g>
+          </svg>
+        </div>
+        <div class="body"><div class="role">Mother of Yomi</div><h4>Izanami</h4><p>The exiled goddess whose grief became a tower.</p></div>
+      </article>
+      <article class="char reveal d1" data-cast="kushinada" role="button" tabindex="0">
+        <div class="face kushinada">
+          <svg class="portrait" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><radialGradient id="kubg" cx="50%" cy="38%"><stop offset="0" stop-color="#3f6c9c"/><stop offset="1" stop-color="#141020"/></radialGradient></defs>
+            <rect width="300" height="300" fill="url(#kubg)"/>
+            <path d="M58 300 C70 222 110 198 150 198 C190 198 230 222 242 300 Z" fill="#243a5c"/>
+            <path d="M120 210 L150 246 L180 210 L180 300 L120 300 Z" fill="#eae0d4"/>
+            <path d="M100 128 C100 78 200 78 200 128 L200 160 C182 132 118 132 100 160 Z" fill="#1a1526"/>
+            <circle cx="150" cy="146" r="50" fill="#f2dfce"/>
+            <g stroke="#f6c863" stroke-width="3" stroke-linecap="round"><path d="M150 92 L150 58"/><path d="M128 96 L112 64"/><path d="M172 96 L188 64"/><path d="M108 108 L82 88"/><path d="M192 108 L218 88"/></g>
+            <g fill="#f6c863"><circle cx="150" cy="56" r="5"/><circle cx="110" cy="62" r="4"/><circle cx="190" cy="62" r="4"/><circle cx="80" cy="86" r="4"/><circle cx="220" cy="86" r="4"/></g>
+            <circle cx="150" cy="128" r="4" fill="#d74b5c"/>
+            <g fill="#4a3630"><ellipse cx="134" cy="150" rx="4" ry="5"/><ellipse cx="166" cy="150" rx="4" ry="5"/></g>
+          </svg>
+        </div>
+        <div class="body"><div class="role">Princess of Sekai</div><h4>Kushinadahime</h4><p>Stolen into the tower's crown &mdash; the reason a server climbs.</p></div>
+      </article>
+      <article class="char reveal d2" data-cast="onamuji" role="button" tabindex="0">
+        <div class="face onamuji">
+          <svg class="portrait" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><radialGradient id="onbg" cx="50%" cy="40%"><stop offset="0" stop-color="#1f6a4b"/><stop offset="1" stop-color="#0e1418"/></radialGradient></defs>
+            <rect width="300" height="300" fill="url(#onbg)"/>
+            <path d="M52 300 C62 224 110 200 150 200 C190 200 238 224 248 300 Z" fill="#1c2a24"/>
+            <ellipse cx="74" cy="238" rx="30" ry="24" fill="#28403a"/>
+            <ellipse cx="226" cy="238" rx="30" ry="24" fill="#28403a"/>
+            <circle cx="150" cy="150" r="50" fill="#d8c3ad"/>
+            <path d="M118 100 C104 74 108 60 98 52 C122 62 130 84 128 104 Z" fill="#3a5a4c"/>
+            <path d="M182 100 C196 74 192 60 202 52 C178 62 170 84 172 104 Z" fill="#3a5a4c"/>
+            <path d="M100 132 C100 92 200 92 200 132 Z" fill="#2c433a"/>
+            <path d="M100 148 C100 128 200 128 200 148 L200 132 L100 132 Z" fill="#22332c"/>
+            <rect x="146" y="130" width="8" height="54" fill="#22332c"/>
+            <g fill="#65e6a2"><ellipse cx="132" cy="150" rx="6" ry="4"/><ellipse cx="168" cy="150" rx="6" ry="4"/></g>
+          </svg>
+        </div>
+        <div class="body"><div class="role">Expedition commander</div><h4>Onamuji</h4><p>Anchors the first floor and asks: &ldquo;Who are you?&rdquo;</p></div>
+      </article>
+      <article class="char reveal d3" data-cast="sune" role="button" tabindex="0">
+        <div class="face sune">
+          <svg class="portrait" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><radialGradient id="subg" cx="50%" cy="42%"><stop offset="0" stop-color="#4a2f8f"/><stop offset="1" stop-color="#120b1e"/></radialGradient></defs>
+            <rect width="300" height="300" fill="url(#subg)"/>
+            <path d="M56 300 C64 210 108 176 150 176 C192 176 236 210 244 300 Z" fill="#1c1330"/>
+            <path d="M110 300 C104 210 130 168 150 168 C170 168 196 210 190 300 Z" fill="#0c0716"/>
+            <g fill="#c9bcd8" opacity=".8"><ellipse cx="134" cy="200" rx="9" ry="12"/><ellipse cx="166" cy="200" rx="9" ry="12"/></g>
+            <g fill="#9c71ff"><ellipse cx="134" cy="200" rx="4" ry="5"/><ellipse cx="166" cy="200" rx="4" ry="5"/></g>
+            <path d="M150 212 L144 228 L156 228 Z" fill="#0c0716"/>
+            <path d="M112 150 L120 118 L132 146 L150 112 L168 146 L180 118 L188 150 L172 158 L128 158 Z" fill="#f6c863"/>
+            <path d="M150 150 L150 158" stroke="#120b1e" stroke-width="6"/>
+            <g stroke="#9c71ff" stroke-width="2" fill="none" opacity=".55"><path d="M96 224 q-12 -20 4 -40"/><path d="M204 224 q12 -20 -4 -40"/></g>
+          </svg>
+        </div>
+        <div class="body"><div class="role">The phantom king</div><h4>Sune</h4><p>His hollow crown still echoes through the tenth floor's basilica.</p></div>
+      </article>
+      <article class="char reveal d4" data-cast="lonx" role="button" tabindex="0">
+        <div class="face lonx">
+          <svg class="portrait" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <radialGradient id="lxbg" cx="50%" cy="42%"><stop offset="0" stop-color="#1c5a7a"/><stop offset="1" stop-color="#0b1220"/></radialGradient>
+              <linearGradient id="blade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8fb8cc"/><stop offset=".5" stop-color="#eaf6ff"/><stop offset="1" stop-color="#66d8ff"/></linearGradient>
+            </defs>
+            <rect width="300" height="300" fill="url(#lxbg)"/>
+            <ellipse cx="150" cy="150" rx="46" ry="120" fill="#66d8ff" opacity=".18"/>
+            <path d="M150 30 L166 70 L162 210 L150 226 L138 210 L134 70 Z" fill="url(#blade)"/>
+            <line x1="150" y1="60" x2="150" y2="206" stroke="#2a4a5c" stroke-width="2" opacity=".5"/>
+            <path d="M108 224 L192 224 L184 236 L116 236 Z" fill="#c9a24a"/>
+            <rect x="142" y="236" width="16" height="44" rx="4" fill="#3a2a22"/>
+            <g stroke="#1f1712" stroke-width="2"><line x1="142" y1="246" x2="158" y2="246"/><line x1="142" y1="256" x2="158" y2="256"/><line x1="142" y1="266" x2="158" y2="266"/></g>
+            <circle cx="150" cy="286" r="10" fill="#c9a24a"/>
+            <ellipse cx="150" cy="140" rx="16" ry="9" fill="#0b1220"/>
+            <circle cx="150" cy="140" r="6" fill="#66d8ff"/>
+            <circle cx="150" cy="140" r="2.5" fill="#0b1220"/>
+          </svg>
+        </div>
+        <div class="body"><div class="role">The cursed blade</div><h4>LONX</h4><p>The sword the world is named for &mdash; a curse with a will.</p></div>
+      </article>
+    </div>
+
+    <div class="sec-head center" style="margin-top:56px">
+      <span class="lp-kicker reveal">Seven peoples</span>
+      <h2 class="lp-h reveal d1">Choose your bloodline</h2>
+    </div>
+    <div class="race-strip">
+      <button class="race-tile reveal" data-race="human" type="button">
+        <span class="orb">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><defs><radialGradient id="rHum"><stop offset="0" stop-color="#fff3d0"/><stop offset="1" stop-color="#f6c863"/></radialGradient></defs><circle cx="40" cy="40" r="38" fill="#1a1526"/><circle cx="40" cy="40" r="16" fill="url(#rHum)"/><g stroke="#f6c863" stroke-width="3" stroke-linecap="round"><line x1="40" y1="6" x2="40" y2="16"/><line x1="40" y1="64" x2="40" y2="74"/><line x1="6" y1="40" x2="16" y2="40"/><line x1="64" y1="40" x2="74" y2="40"/><line x1="16" y1="16" x2="23" y2="23"/><line x1="57" y1="57" x2="64" y2="64"/><line x1="64" y1="16" x2="57" y2="23"/><line x1="23" y1="57" x2="16" y2="64"/></g></svg>
+        </span><b>Human</b><small>Adaptable</small>
+      </button>
+      <button class="race-tile reveal d1" data-race="elf" type="button">
+        <span class="orb">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="38" fill="#0f1c22"/><path d="M52 20 a24 24 0 1 0 0 40 a30 30 0 0 1 0-40Z" fill="#cbeeff"/><path d="M30 58 q4-18 22-24 q-10 12-14 26 Z" fill="#66d8ff"/><line x1="30" y1="58" x2="42" y2="40" stroke="#0f1c22" stroke-width="2"/></svg>
+        </span><b>Elf</b><small>Swift &amp; precise</small>
+      </button>
+      <button class="race-tile reveal d1" data-race="halfelf" type="button">
+        <span class="orb">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><defs><linearGradient id="rHE" x1="0" x2="1"><stop offset="0" stop-color="#65e6a2"/><stop offset="1" stop-color="#66d8ff"/></linearGradient></defs><circle cx="40" cy="40" r="38" fill="#12241d"/><path d="M22 60 Q40 8 58 60" fill="none" stroke="url(#rHE)" stroke-width="4"/><line x1="22" y1="60" x2="58" y2="60" stroke="#d9f7e6" stroke-width="2.5"/><circle cx="40" cy="34" r="4" fill="#d9f7e6"/></svg>
+        </span><b>Half Elf</b><small>Diplomat</small>
+      </button>
+      <button class="race-tile reveal d2" data-race="orc" type="button">
+        <span class="orb">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="38" fill="#2a0f14"/><path d="M40 20 L58 30 L58 44 Q40 66 22 44 L22 30 Z" fill="#d74b5c"/><path d="M28 46 q6 12 12 0" fill="none" stroke="#2a0f14" stroke-width="3"/><path d="M40 46 q6 12 12 0" fill="none" stroke="#2a0f14" stroke-width="3"/><path d="M30 40 l-6 8 M50 40 l6 8" stroke="#ffe0d0" stroke-width="4" stroke-linecap="round"/></svg>
+        </span><b>Orc</b><small>Raw power</small>
+      </button>
+      <button class="race-tile reveal d2" data-race="halforc" type="button">
+        <span class="orb">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><defs><linearGradient id="rHO" x1="0" x2="1"><stop offset="0" stop-color="#d74b5c"/><stop offset="1" stop-color="#f6c863"/></linearGradient></defs><circle cx="40" cy="40" r="38" fill="#2a1614"/><path d="M26 26 l12 12 M54 26 l-12 12" stroke="url(#rHO)" stroke-width="5" stroke-linecap="round"/><circle cx="40" cy="44" r="12" fill="none" stroke="url(#rHO)" stroke-width="5"/><line x1="40" y1="44" x2="40" y2="26" stroke="#2a1614" stroke-width="4"/></svg>
+        </span><b>Half Orc</b><small>Bridge-born</small>
+      </button>
+      <button class="race-tile reveal d3" data-race="dwarf" type="button">
+        <span class="orb">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="38" fill="#241b10"/><rect x="26" y="18" width="28" height="12" rx="3" fill="#f6c863"/><rect x="36" y="28" width="8" height="26" fill="#9a8250"/><path d="M28 56 L52 56 L48 66 L32 66 Z" fill="#f6c863"/></svg>
+        </span><b>Dwarf</b><small>Master smith</small>
+      </button>
+      <button class="race-tile reveal d3" data-race="phantom" type="button">
+        <span class="orb">
+          <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="38" fill="#160f24"/><path d="M40 16 C54 16 58 30 58 44 L58 62 L50 56 L44 62 L38 56 L32 62 L26 56 L22 62 L22 44 C22 30 26 16 40 16Z" fill="#9c71ff" opacity=".85"/><ellipse cx="33" cy="40" rx="4" ry="5" fill="#160f24"/><ellipse cx="47" cy="40" rx="4" ry="5" fill="#160f24"/></svg>
+        </span><b>Phantom</b><small>Cursed caster</small>
+      </button>
+    </div>
+  </section>
+
+  <!-- The Climb -->
+  <section class="lp-sec wide" id="climb">
+    <div class="sec-head center">
+      <span class="lp-kicker reveal">Twelve floors</span>
+      <h2 class="lp-h reveal d1">The climb</h2>
+      <p class="lp-lead reveal d2">Each floor is a world with its own boss. Tap a light on the tower to explore it.</p>
+    </div>
+    <div class="tower-explorer reveal">
+      <div class="te-tower">
+        <svg viewBox="0 0 300 900" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Interactive Tower of Yomi">
+          <defs>
+            <linearGradient id="teBody" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0d0a18"/><stop offset=".5" stop-color="#1c142c"/><stop offset="1" stop-color="#2e1c3e"/></linearGradient>
+            <linearGradient id="teBeam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c863"/><stop offset="1" stop-color="#9c71ff"/></linearGradient>
+            <radialGradient id="teHalo"><stop offset="0" stop-color="#f6c863" stop-opacity=".9"/><stop offset="1" stop-color="#f6c863" stop-opacity="0"/></radialGradient>
+          </defs>
+          <ellipse cx="150" cy="120" rx="80" ry="80" fill="#9c71ff" opacity=".12"/>
+          <path d="M108 872 L134 96 L166 96 L192 872 Z" fill="url(#teBody)" stroke="rgba(156,113,255,.28)" stroke-width="1.5"/>
+          <g fill="#2a1a3c" stroke="#000" stroke-opacity=".35" id="teEaves"></g>
+          <path class="te-progress" d="M150 862 L150 110" stroke="url(#teBeam)" stroke-width="3" opacity=".4"/>
+          <g id="teDots"></g>
+          <circle cx="150" cy="86" r="30" fill="url(#teHalo)" class="tw-beacon"/>
+          <circle cx="150" cy="86" r="10" fill="url(#teBeam)"/>
+          <path d="M150 60 L156 82 L150 110 L144 82 Z" fill="url(#teBeam)"/>
+        </svg>
+      </div>
+      <div class="te-panel" id="tePanel" aria-live="polite">
+        <!-- populated by landing.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Race / floor summary modal -->
+  <div class="lp-modal" id="lpModal" hidden>
+    <div class="lp-modal-scrim" data-close></div>
+    <div class="lp-modal-card" role="dialog" aria-modal="true" aria-labelledby="lpModalTitle">
+      <button class="lp-modal-x" data-close type="button" aria-label="Close">&times;</button>
+      <div class="lp-modal-body" id="lpModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <section class="lp-final">
+    <div class="glow"></div>
+    <h2 class="reveal">Read the complete game bible</h2>
+    <p class="reveal d1">Story, races, classes, all twelve floors, the bestiary, systems, and more.</p>
+    <div class="cta-row reveal d2" style="justify-content:center">
+      <a class="btn-lg primary" href="pages/overview.html">Open the documentation</a>
+      <a class="btn-lg ghost" href="pages/story.html">Start with the story</a>
+    </div>
+  </section>
+
+  <footer class="lp-footer">
+    <p><b>LONX Online &mdash; Complete Game Bible.</b> Built from the original 2014 game documentation and rewritten as a coherent, polished, multi-page edition. Created by Dhiogo J. C. de Sá and Guilherme F. S. de Alvarenga in the original draft; this edition consolidates and expands the material.</p>
+  </footer>
+
+  <script src="assets/landing.js"></script>
+</body>
+</html>

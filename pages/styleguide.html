@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visual Style Guide - LONX Online</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<div class="layout">
+  <aside data-page="styleguide" data-base="../"></aside>
+  <main class="main">
+    <div class="crumbs"><a href="../index.html">Home</a><span>/</span>Visual Style Guide</div>
+    <div class="pagehead">
+      <span class="eyebrow">Art direction</span>
+      <h2>Visual style guide</h2>
+      <p class="lede">The shared visual language for LONX Online &mdash; the palette, type, and iconography of this bible, plus the mood boards that define how <b>Sekai</b>, <b>Yomi</b>, the <b>III Gods</b>, and the <b>Tower</b> should look and feel across concept art, UI, and marketing.</p>
+    </div>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Foundation</span><h2>Core palette</h2></div><p>These are the exact tokens used across every page (CSS custom properties). Use them for UI, overlays, and rarity language.</p></div>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="band" style="background:#08070b"></div><div class="info"><b>Void</b><code>--bg #08070b</code><small>Base background</small></div></div>
+        <div class="swatch"><div class="band" style="background:#12101a"></div><div class="info"><b>Panel</b><code>--panel #12101a</code><small>Cards &amp; surfaces</small></div></div>
+        <div class="swatch"><div class="band" style="background:#171420"></div><div class="info"><b>Panel 2</b><code>--panel2 #171420</code><small>Raised surfaces</small></div></div>
+        <div class="swatch"><div class="band" style="background:#f5efe3"></div><div class="info"><b>Ink</b><code>--ink #f5efe3</code><small>Primary text</small></div></div>
+        <div class="swatch"><div class="band" style="background:#b8abb7"></div><div class="info"><b>Muted</b><code>--muted #b8abb7</code><small>Secondary text</small></div></div>
+        <div class="swatch"><div class="band" style="background:#f6c863"></div><div class="info"><b>Gold</b><code>--gold #f6c863</code><small>The III Gods / accent</small></div></div>
+        <div class="swatch"><div class="band" style="background:#d74b5c"></div><div class="info"><b>Red</b><code>--red #d74b5c</code><small>Yomi / danger</small></div></div>
+        <div class="swatch"><div class="band" style="background:#9c71ff"></div><div class="info"><b>Violet</b><code>--violet #9c71ff</code><small>Phantoms / arcana</small></div></div>
+        <div class="swatch"><div class="band" style="background:#66d8ff"></div><div class="info"><b>Blue</b><code>--blue #66d8ff</code><small>Sea / cold light</small></div></div>
+        <div class="swatch"><div class="band" style="background:#65e6a2"></div><div class="info"><b>Green</b><code>--green #65e6a2</code><small>Life / safe zones</small></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Meaning</span><h2>Colour language</h2></div><p>Colour is never decoration alone. Each hue carries a fixed narrative meaning across the whole project.</p></div>
+      <div class="panel"><table>
+        <thead><tr><th>Colour</th><th>Represents</th><th>Used for</th></tr></thead>
+        <tbody>
+          <tr class="searchable" data-search="gold iii gods divinity amaterasu tsukuyomi susanoo accent legendary"><td><span class="rar legend">Gold</span></td><td>The III Gods, divinity, hope</td><td>Accents, legendary rarity, the tower crown</td></tr>
+          <tr class="searchable" data-search="red yomi izanami grief danger boss corruption"><td><span class="rar" style="color:#ffd0d6;border-color:rgba(215,75,92,.5);background:rgba(215,75,92,.12)">Red</span></td><td>Yomi, grief, corruption, danger</td><td>Bosses, warnings, the underworld</td></tr>
+          <tr class="searchable" data-search="violet phantoms lonx arcana magic sune curse"><td><span class="rar epic">Violet</span></td><td>Phantoms, LONX, arcana</td><td>Magic, hidden paths, the cursed sword</td></tr>
+          <tr class="searchable" data-search="blue sea moon tsukuyomi elves cold light"><td><span class="rar rare">Blue</span></td><td>Sea, moon, Tsukuyomi, elves</td><td>Cold light, water floors, ranged classes</td></tr>
+          <tr class="searchable" data-search="green life safe zones nature druid rest sekai"><td><span class="rar uncommon">Green</span></td><td>Life, nature, safety</td><td>Rest shrines, safe zones, Sekai colonies</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Type</span><h2>Typography</h2></div><p>Two families only: a humanist sans for all UI and body, a serif for lore voice and ornamental headers.</p></div>
+      <div class="panel">
+        <div class="type-row"><span class="spec">Display / H2 &middot; Inter 800</span><span style="font-size:34px;font-weight:800">The tower wins through exhaustion</span></div>
+        <div class="type-row"><span class="spec">Section / H3 &middot; Inter 700</span><span style="font-size:22px;font-weight:700">The Garden of Withered Suns</span></div>
+        <div class="type-row"><span class="spec">Body &middot; Inter 400 / 1.6</span><span style="font-size:16px">Floors are conquered once per server and stay conquered.</span></div>
+        <div class="type-row"><span class="spec">Muted / caption &middot; 13px</span><span style="font-size:13px;color:var(--muted)">Base &middot; Boss &middot; Level band</span></div>
+        <div class="type-row"><span class="spec">Lore voice &middot; Georgia italic</span><span style="font-family:Georgia,serif;font-style:italic;font-size:18px;color:#e7dcd8">&ldquo;Sleep is not weakness here. It is the only wall Yomi cannot climb.&rdquo;</span></div>
+        <div class="type-row"><span class="spec">Eyebrow &middot; 11px / .16em caps</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:800">The seven peoples</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Worlds</span><h2>Realm mood boards</h2></div><p>The four visual pillars. Every environment, prop, and UI skin should trace back to one of these.</p></div>
+      <div class="mood">
+        <div class="mood-card searchable" data-search="sekai living world warmth amaterasu ashihara unshu green gold blue daylight hope civilization">
+          <div class="band sekai"></div>
+          <div class="body">
+            <h4>Sekai</h4>
+            <div class="palette"><span style="background:#f6c863"></span><span style="background:#65e6a2"></span><span style="background:#66d8ff"></span><span style="background:#f5efe3"></span></div>
+            <p>The living world above: warm daylight, timber and stone cities, banners, farmland, and the sea. Sekai is the memory of home the climbers are fighting to reclaim.</p>
+            <div class="keywords"><span class="kw">Warm</span><span class="kw">Handmade</span><span class="kw">Hopeful</span><span class="kw">Lived-in</span></div>
+          </div>
+        </div>
+        <div class="mood-card searchable" data-search="yomi underworld grief red violet corruption ash bone rot izanami death shadow oppressive">
+          <div class="band yomi"></div>
+          <div class="body">
+            <h4>Yomi</h4>
+            <div class="palette"><span style="background:#d74b5c"></span><span style="background:#9c71ff"></span><span style="background:#3a1730"></span><span style="background:#120b1a"></span></div>
+            <p>The underworld the tower is made of: ash, bone, black water, and grief given form. Beautiful but wrong &mdash; corruption dressed as ornament. Never simply &ldquo;evil&rdquo;; it is Izanami's sorrow.</p>
+            <div class="keywords"><span class="kw">Mournful</span><span class="kw">Ornate</span><span class="kw">Rotting</span><span class="kw">Oppressive</span></div>
+          </div>
+        </div>
+        <div class="mood-card searchable" data-search="iii gods amaterasu tsukuyomi susanoo sun moon storm gold blue divine light celestial radiant">
+          <div class="band gods"></div>
+          <div class="body">
+            <h4>The III Gods</h4>
+            <div class="palette"><span style="background:#f6c863"></span><span style="background:#66d8ff"></span><span style="background:#9c71ff"></span><span style="background:#f5efe3"></span></div>
+            <p>Amaterasu (sun / gold), Tsukuyomi (moon / blue-violet), Susanoo (storm / steel). Rendered as light and weather more than figures &mdash; radiant, distant, and never fully seen.</p>
+            <div class="keywords"><span class="kw">Radiant</span><span class="kw">Elemental</span><span class="kw">Distant</span><span class="kw">Sacred</span></div>
+          </div>
+        </div>
+        <div class="mood-card searchable" data-search="tower izanami climb twelve floors vertical monument architecture gold veins violet ascension crown">
+          <div class="band tower"></div>
+          <div class="body">
+            <h4>The Tower</h4>
+            <div class="palette"><span style="background:#171420"></span><span style="background:#3a1730"></span><span style="background:#f6c863"></span><span style="background:#9c71ff"></span></div>
+            <p>Izanami's twelve-floor monument: dark architecture threaded with gold veins that brighten as the frontier is conquered. Always vertical, always looming &mdash; the horizon is up.</p>
+            <div class="keywords"><span class="kw">Vertical</span><span class="kw">Monumental</span><span class="kw">Threaded gold</span><span class="kw">Ascension</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Marks</span><h2>Iconography &amp; UI motifs</h2></div><p>Consistent glyphs tie the sidebar, floor badges, and rarity chips together.</p></div>
+      <div class="grid two">
+        <div class="callout searchable" data-search="iconography sigil L brand floor badge roman numerals rarity chips glyphs sidebar icons"><h3>Signature marks</h3><ul>
+          <li><b>Brand sigil</b> &mdash; the rounded &ldquo;L&rdquo; tile in a gold&rarr;red&rarr;violet gradient, used as the app mark.</li>
+          <li><b>Floor badges</b> &mdash; Roman numerals (I&ndash;XII) on the same gradient; the tower's counting system.</li>
+          <li><b>Rarity chips</b> &mdash; Common (grey), Uncommon (green), Rare (blue), Epic (violet), Legendary (gold).</li>
+          <li><b>Nav glyphs</b> &mdash; single Unicode symbols, never multicolour emoji.</li>
+        </ul></div>
+        <div class="callout searchable" data-search="ui shape language rounded corners radius blur panels dashed edges maps borders shadows"><h3>Shape language</h3><ul>
+          <li><b>Radius</b> &mdash; generous rounding (12&ndash;26px); nothing sharp-cornered.</li>
+          <li><b>Surfaces</b> &mdash; translucent panels over the radial-glow background, soft shadows.</li>
+          <li><b>Lines</b> &mdash; hairline borders at <code>rgba(255,255,255,.12)</code>; dashed gold for map paths.</li>
+          <li><b>Glow</b> &mdash; coloured radial glows signal importance, not drop-shadows.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Rules</span><h2>Do &amp; don't</h2></div><p>Guardrails to keep the art direction coherent as more artists contribute.</p></div>
+      <div class="do-dont">
+        <div class="panel">
+          <div class="principle do"><div class="mark">&#10003;</div><div><b>Let colour carry meaning.</b> Gold for the divine, red for Yomi, violet for the phantom/arcane.</div></div>
+          <div class="principle do"><div class="mark">&#10003;</div><div><b>Keep Yomi beautiful.</b> Its horror comes from grief and decay, not gore.</div></div>
+          <div class="principle do"><div class="mark">&#10003;</div><div><b>Point the eye upward.</b> Compose environments and UI around the vertical climb.</div></div>
+          <div class="principle do"><div class="mark">&#10003;</div><div><b>Show conquest.</b> Gold veins and colonies brighten a floor once it is taken.</div></div>
+        </div>
+        <div class="panel">
+          <div class="principle dont"><div class="mark">&times;</div><div><b>No neon or high-saturation UI.</b> Keep hues muted against the dark base.</div></div>
+          <div class="principle dont"><div class="mark">&times;</div><div><b>Don't render the gods as ordinary people.</b> They are light and weather.</div></div>
+          <div class="principle dont"><div class="mark">&times;</div><div><b>Avoid pure black or pure white fills.</b> Use Void and Ink instead.</div></div>
+          <div class="principle dont"><div class="mark">&times;</div><div><b>No multicolour emoji</b> in UI &mdash; single-tone glyphs only.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pagelinks">
+      <a href="formulae.html"><small>Previous</small><b>&larr; Formulae</b></a>
+      <a class="next" href="../index.html"><small>Back to start</small><b>Home &rarr;</b></a>
+    </div>
+    <p class="no-results">Nothing matches your filter.</p>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

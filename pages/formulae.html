@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulae - LONX Online</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<div class="layout">
+  <aside data-page="formulae" data-base="../"></aside>
+  <main class="main">
+    <div class="crumbs"><a href="../index.html">Home</a><span>/</span>Formulae</div>
+    <div class="pagehead">
+      <span class="eyebrow">Combat math</span>
+      <h2>Formulae from the original system</h2>
+      <p class="lede">These preserve the draft's mathematical direction while making the presentation easier to use for balancing. Abbreviations: WPD = weapon physical damage, MWPD = magic weapon damage, AD = arrow damage, BDMG = bomb base damage, LVL = character level.</p>
+    </div>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Offense</span><h2>Attack &amp; damage</h2></div></div>
+      <div class="panel"><table>
+        <thead><tr><th>System</th><th>Formula / Rule</th></tr></thead>
+        <tbody>
+          <tr class="searchable" data-search="base atk strength wpd"><td>Base ATK</td><td><code>(STR x 0.1) + WPD</code></td></tr>
+          <tr class="searchable" data-search="base matk wisdom mwpd magic"><td>Base MATK</td><td><code>(WIS x 0.1) + MWPD</code></td></tr>
+          <tr class="searchable" data-search="weapon mastery rule no mastery 30 percent level i 50 percent each level +5 master 100"><td>Weapon Mastery Rule</td><td><code>No mastery = 30% of weapon damage; Mastery Level I = 50%; each level adds +5% until Level Master = 100%.</code></td></tr>
+          <tr class="searchable" data-search="melee damage strength atk hit variance 12 percent"><td>Melee Damage</td><td><code>(STR / 11) x ATK, then each hit varies by roughly 12%.</code></td></tr>
+          <tr class="searchable" data-search="ranged damage dexterity wpd arrow damage"><td>Ranged Damage</td><td><code>[(DEX / 11) x WPD] + [AD x (DEX / 3)]</code></td></tr>
+          <tr class="searchable" data-search="bomb damage bdmg intelligence"><td>Bomb Damage</td><td><code>[(BDMG + INT) x 30 / 11]</code></td></tr>
+          <tr class="searchable" data-search="magic damage matk intelligence wisdom 36 minimum"><td>Magic Damage</td><td><code>[(MATK x 60 / 11) + (INT x 20 / 11)] x WIS / 36; if WIS &lt; 36, use 36.</code></td></tr>
+          <tr class="searchable" data-search="critical hit rate luck 2 percent 0.083"><td>Critical Hit Rate</td><td><code>Starts at 2% and increases by 0.083% for each point in LUCK.</code></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Defense &amp; survival</span><h2>HP, resistance &amp; capacity</h2></div></div>
+      <div class="panel"><table>
+        <thead><tr><th>System</th><th>Formula / Rule</th></tr></thead>
+        <tbody>
+          <tr class="searchable" data-search="hp health strength constitution level"><td>HP</td><td><code>(6 x STR + 30 x CON + 4 x LVL) / 1.036</code></td></tr>
+          <tr class="searchable" data-search="carrying capacity constitution strength weight"><td>Carrying Capacity</td><td><code>[100 + (CON / 10) + (STR / 2)] / 1.036</code></td></tr>
+          <tr class="searchable" data-search="natural resistance constitution level pure damage critical strikes"><td>Natural Resistance</td><td><code>(CON / 3) + (0.03 x LVL), applied to pure damage such as critical strikes.</code></td></tr>
+          <tr class="searchable" data-search="knockback resistance constitution 7 con 1 percent"><td>Knockback Resistance</td><td><code>Every 7 CON grants 1% knockback resistance.</code></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Tempo &amp; resources</span><h2>Speed &amp; mana</h2></div></div>
+      <div class="panel"><table>
+        <thead><tr><th>System</th><th>Formula / Rule</th></tr></thead>
+        <tbody>
+          <tr class="searchable" data-search="attack speed aspd agility weapon speed max 165"><td>Attack Speed</td><td><code>Base ASPD = [(AGI - 10) x 0.3125] + 24; weapon speed modifies final ASPD; max is 165.</code></td></tr>
+          <tr class="searchable" data-search="mana intelligence level"><td>Mana</td><td><code>[(200 x INT / 11) + (0.9 x LVL)]</code></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Notes</span><h2>Balancing guidance</h2></div></div>
+      <div class="callout searchable" data-search="balancing race multipliers stat scaling wis floor 36 minimum tuning"><ul>
+        <li>Race multipliers (see the <a href="races.html">Races</a> page) scale how quickly each stat feeds these formulae.</li>
+        <li>Magic damage floors WIS at 36, so casters below that threshold gain nothing extra from the WIS scalar.</li>
+        <li>The <code>/ 1.036</code> divisor in HP and Carrying Capacity is a global tuning constant; adjust it to rescale survivability server-wide.</li>
+        <li>Critical rate scales purely from LUCK, which is why Humans (1.20x LUCK) crit most reliably and Phantoms (0.78x) least.</li>
+      </ul></div>
+    </section>
+
+    <div class="pagelinks">
+      <a href="items.html"><small>Previous</small><b>&larr; Items</b></a>
+      <a class="next" href="styleguide.html"><small>Next</small><b>Visual Style Guide &rarr;</b></a>
+    </div>
+    <p class="no-results">No formulae match your filter.</p>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>

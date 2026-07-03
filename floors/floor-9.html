@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Floor IX - The Field of Triangle Oaths | LONX Online</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<div class="layout">
+  <aside data-page="floors" data-base="../"></aside>
+  <main class="main">
+    <div class="crumbs"><a href="../index.html">Home</a><span>/</span><a href="../pages/floors.html">Floors</a><span>/</span>Floor IX</div>
+
+    <div class="floor-hero">
+      <div class="floor-badge">IX</div>
+      <div class="fh-body">
+        <div class="floor-kicker">Alliance mechanics &middot; class cooperation</div>
+        <h2>The Field of Triangle Oaths</h2>
+        <p>An open battlefield the size of a war. Three sanctuaries - Sun, Sea, and Moon - must be held at once, and no single class can hold them alone. This floor is a puzzle written for the whole party sheet: tanks, ranged damage, support songs, healing, tracking, and guild logistics all required in the same breath. It is where the Triangle Alliance's oath becomes a mechanic.</p>
+        <div class="floor-chips">
+          <span class="kv"><b>Base</b> Oathstone Bastion</span>
+          <span class="kv"><b>Boss</b> The Broken Standard</span>
+          <span class="kv"><b>Level</b> 68 - 76</span>
+          <span class="kv"><b>Party</b> 6 - 12 (raid)</span>
+          <span class="kv"><b>Biome</b> Open battlefield &amp; three shrines</span>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Map</span><h2>The three-front field</h2></div><p>Sun, Sea, and Moon shrines sit at the field's corners; the Broken Standard musters at the center only when all three are held.</p></div>
+      <div class="panel"><div class="fmap-wrap">
+        <svg class="fmap" viewBox="0 0 760 340" role="img" aria-label="Schematic map of the Field of Triangle Oaths">
+          <ellipse class="region" cx="380" cy="185" rx="330" ry="150" fill="var(--gold)"/>
+          <path class="edge" d="M120 250 L300 90"/>
+          <path class="edge" d="M120 250 L300 280"/>
+          <path class="edge" d="M300 90 L400 185"/>
+          <path class="edge" d="M300 280 L400 185"/>
+          <path class="edge" d="M560 110 L400 185"/>
+          <path class="edge hidden" d="M400 185 L520 250"/>
+          <circle class="node base" cx="120" cy="250" r="16"/><text x="120" y="290" text-anchor="middle" class="lbl">Base</text><text x="120" y="235" text-anchor="middle">Oathstone Bastion</text>
+          <circle class="node zone" cx="300" cy="90" r="14"/><text x="300" y="72" text-anchor="middle">Sun Shrine</text>
+          <circle class="node zone" cx="300" cy="280" r="14"/><text x="300" y="312" text-anchor="middle">Sea Shrine</text>
+          <circle class="node zone" cx="560" cy="110" r="14"/><text x="560" y="92" text-anchor="middle">Moon Shrine</text>
+          <circle class="node boss" cx="400" cy="185" r="16"/><text x="400" y="163" text-anchor="middle" class="lbl">Boss</text><text x="400" y="216" text-anchor="middle">Broken Standard</text>
+          <circle class="node dungeon" cx="520" cy="250" r="13"/><text x="520" y="278" text-anchor="middle">Supply Vaults</text>
+        </svg>
+        <div class="map-legend"><h4>Legend</h4><ul>
+          <li><span class="dot base"></span> Bastion base (safe)</li>
+          <li><span class="dot zone"></span> Sanctuary shrine (hold)</li>
+          <li><span class="dot dungeon"></span> Guild supply vault</li>
+          <li><span class="dot boss"></span> Central muster (boss)</li>
+        </ul></div>
+      </div></div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">NPCs</span><h2>Keepers of the oath</h2></div><p>The floor's NPCs coordinate the three-front hold and the guild supply chain.</p></div>
+      <div class="npc-grid">
+        <div class="npc"><div class="npc-head"><div class="portrait">O</div><div><h4>Oathstone Marshal Iori</h4><div class="npc-role">Field commander</div></div></div><p>Directs the three-shrine event and assigns squads to Sun, Sea, and Moon. Repairs the Triangle Banner after victory.</p><div class="say">&ldquo;Three shrines, one oath. Break the oath and the field breaks you. Hold together or fall apart.&rdquo;</div></div>
+        <div class="npc"><div class="npc-head"><div class="portrait">G</div><div><h4>Guild-Logistician Fen</h4><div class="npc-role">Supply chain</div></div></div><p>Runs the guild supply-chain quests that fuel the shrines - crafting, gathering, and hauling all feed the hold.</p><div class="say">&ldquo;Heroes win the shrine. Logistics win the day. Bring me crates or bring me excuses.&rdquo;</div></div>
+        <div class="npc"><div class="npc-head"><div class="portrait">T</div><div><h4>Tracker Sao</h4><div class="npc-role">Recon &middot; quest-giver</div></div></div><p>Scouts enemy pushes between shrines and marks Vowless Knight patrols so parties can intercept before they cap a shrine.</p><div class="say">&ldquo;I tell you where they hit next. What you do with the warning is your oath, not mine.&rdquo;</div></div>
+        <div class="npc"><div class="npc-head"><div class="portrait">M</div><div><h4>Minstrel-Captain Rua</h4><div class="npc-role">Support songs vendor</div></div></div><p>Teaches and sells the field's support songs - the buffs that let a stretched party hold three fronts at once.</p><div class="say">&ldquo;One voice cannot hold three shrines. But one song, sung by all of you, can.&rdquo;</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Dungeons</span><h2>Instanced encounters</h2></div><p>A logistics run and the three-front field battle.</p></div>
+      <div class="grid two">
+        <div class="dungeon"><div class="dtype">Logistics dungeon</div><h4>The Supply Vaults</h4><p>A guild-scale run to stock the shrines: gather, craft, and haul supply crates through contested ground. The vault's output directly sets how long the shrines can hold in the field event.</p><ul><li>6 - 8 players</li><li>Mechanic: craft &amp; escort supply</li><li>Reward: shrine-buff tokens</li></ul><div class="dmeta"><span class="rar rare">Reset 1 hr</span><span class="rar uncommon">Guild rep bonus</span></div></div>
+        <div class="dungeon"><div class="dtype">Raid event</div><h4>The Three-Front Hold</h4><p>Hold Sun, Sea, and Moon simultaneously as the Broken Standard pushes each in turn. Losing any shrine ends the muster; holding all three summons the boss to the center for the finish.</p><ul><li>6 - 12 players</li><li>Mechanic: hold all three at once</li><li>Enrage: the Final Push (15 min)</li></ul><div class="dmeta"><span class="rar epic">Reset weekly</span><span class="rar legend">First-clear title</span></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Respawn logic</span><h2>Spawn timers &amp; caps</h2></div><p>Enemy waves cycle between shrines; the boss is a weekly muster.</p></div>
+      <div class="panel"><table>
+        <thead><tr><th>Monster</th><th>Spawn zone</th><th>Respawn</th><th>Zone cap</th><th>Behaviour</th></tr></thead>
+        <tbody>
+          <tr><td>Shrine Harrier</td><td>Rotating shrines</td><td>30 s</td><td>18</td><td>Caps unheld shrines</td></tr>
+          <tr><td>Pale Cavalry</td><td>Open field</td><td>45 s</td><td>12</td><td>Fast; flanks between fronts</td></tr>
+          <tr><td>Standard Eater</td><td>Contested shrine</td><td>70 s</td><td>8</td><td>Drains shrine hold-meter</td></tr>
+          <tr><td>Oathbreaker</td><td>Open field (elite)</td><td>3 min</td><td>4</td><td>Mini-elite; removes buffs</td></tr>
+          <tr><td>Vowless Knight</td><td>Push lanes</td><td>Wave spawn 45 s</td><td>6 alive</td><td>Leads shrine assaults</td></tr>
+          <tr><td>The Broken Standard (boss)</td><td>Central muster</td><td>Weekly lockout</td><td>1</td><td>Summoned when all held</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><span class="eyebrow">Drops</span><h2>Loot tables</h2></div><p>Oath-set gear and the Broken Standard's banner-relic anchor the floor.</p></div>
+      <div class="panel"><table>
+        <thead><tr><th>Source</th><th>Drop</th><th>Rarity</th><th>Chance</th></tr></thead>
+        <tbody>
+          <tr><td>Shrine Harrier</td><td>Frayed Oath-Cord</td><td><span class="rar common">Common</span></td><td class="rate">54%</td></tr>
+          <tr><td>Pale Cavalry</td><td>Ghost-Steed Bit</td><td><span class="rar common">Common</span></td><td class="rate">42%</td></tr>
+          <tr><td>Standard Eater</td><td>Devoured Colors</td><td><span class="rar uncommon">Uncommon</span></td><td class="rate">15%</td></tr>
+          <tr><td>Oathbreaker</td><td>Broken Vow Sigil</td><td><span class="rar rare">Rare</span></td><td class="rate">10%</td></tr>
+          <tr><td>The Broken Standard</td><td>Oathkeeper's Bulwark</td><td><span class="rar rare">Rare</span></td><td class="rate">16%</td></tr>
+          <tr><td>The Broken Standard</td><td>Triangle Oath Regalia</td><td><span class="rar epic">Epic</span></td><td class="rate">6%</td></tr>
+          <tr><td>Broken Standard (weekly first)</td><td>Repaired Triangle Banner (server buff)</td><td><span class="rar legend">Legendary</span></td><td class="rate">Guaranteed 1st clear</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <div class="pagelinks">
+      <a href="floor-8.html"><small>Previous floor</small><b>&larr; VIII &middot; Unshu Afterfall</b></a>
+      <a class="next" href="floor-10.html"><small>Next floor</small><b>X &middot; The Phantom Basilica &rarr;</b></a>
+    </div>
+  </main>
+</div>
+<script src="../assets/site.js"></script>
+</body>
+</html>
